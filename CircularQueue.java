@@ -40,7 +40,20 @@ class CircularQueueImplement
 	 void display()
 	{
 		if(rear>front)
-		
+		{
+			for(int i=front;i<=rear-1;i++)
+			System.out.print(queue[i]+"\t");
+		}
+		else 
+		{
+			for(int i=front;i<size;i++)
+			System.out.print(queue[i]+"\t");
+
+		    for(int i=0;i<=rear;i++)
+			System.out.print(queue[i]+"\t");
+
+
+		}
 		
 		System.out.println();
 	    
@@ -55,7 +68,7 @@ class CircularQueueImplement
 	}
 	boolean isEmpty()
 	{
-		if(front==rear)
+		if(front==rear-1)
 			return true;
 
 		return false;
